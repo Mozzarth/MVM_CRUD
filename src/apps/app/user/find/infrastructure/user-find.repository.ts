@@ -16,7 +16,7 @@ export class FindUserMySqlRepository implements IFindUserRepository {
         connection.query(
           `SELECT
             BIN_TO_UUID(idUSer) as idUSer,
-            nombre,apellido
+            nombre,apellido,
             email,telefono,
             active
            FROM users 
@@ -58,7 +58,7 @@ export class FindUserMySqlRepository implements IFindUserRepository {
         connection.query(
           `SELECT
             BIN_TO_UUID(idUSer) as idUSer,
-            nombre,apellido
+            nombre,apellido,
             email,telefono,
             active
            FROM users 
@@ -139,7 +139,7 @@ export class FindUserMySqlRepository implements IFindUserRepository {
         connection.query(
           `SELECT
             BIN_TO_UUID(idUSer) as idUSer,
-            nombre,apellido
+            nombre,apellido,
             email,telefono,
             active
             FROM users where email = ?
